@@ -1,0 +1,43 @@
+<!-- 🧠 2. What is a Map in JavaScript?
+
+👉 A Map is like a dictionary — it stores key-value pairs.
+Each key is unique, but values can repeat.
+
+📦 Real-life Example:
+Imagine a fruit shop — each fruit name (key) is connected to its stock count (value).
+🧩 Syntax:
+
+const myMap = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+✅ Example – Iterating Over a Map -->
+
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>🍎 Fruit Shop (Map Example)</h2>
+  <p id="demo"></p>
+
+  <script>
+    // Creating a Map (fruit → stock)
+    const fruits = new Map([
+      ["Apples", 500],
+      ["Bananas", 300],
+      ["Oranges", 200],
+      ["Grapes", 500],
+      ["Mangoes", 300],
+      ["Mangoes", 300]
+    ]);
+
+    let inventory = "";
+    for (const [fruit, quantity] of fruits) {
+      inventory += `🍉 ${fruit} : ${quantity} pieces<br>`;
+    }
+
+    document.getElementById("demo").innerHTML = inventory;
+  </script>
+</body>
+</html>

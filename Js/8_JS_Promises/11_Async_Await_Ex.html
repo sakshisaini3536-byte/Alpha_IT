@@ -1,0 +1,80 @@
+<!-- 
+
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>☕ Async/Await Example - Coffee Shop</h2>
+  <p id="demo"></p>
+
+  <script>
+    async function makeCoffee() {
+      document.getElementById("demo").innerHTML = "Barista: Starting to make your coffee... ⏳";
+
+      // Promise takes time (3 seconds)
+      let coffeeReady = new Promise(function(resolve) {
+        setTimeout(() => resolve("✅ Coffee is Ready! ☕"), 3000);
+      });
+
+      let result = await coffeeReady;
+      document.getElementById("demo").innerHTML = result;
+    }
+
+    function readagazine() {
+      console.log("📰 You are reading a magazine while waiting...");
+    }
+
+     function serveTea() {
+      console.log("📰 Your tea will be served...");
+    }
+
+   
+    makeCoffee();
+    readMagazine();
+    serveTea();
+     
+  </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>☕ Async/Await Example - Coffee Shop</h2>
+  <p id="demo"></p>
+
+  <script>
+    async function makeCoffee() {
+      document.getElementById("demo").innerHTML = "Barista: Starting to make your coffee... ⏳";
+
+
+      function readMagazine() {
+      console.log("📰 You are reading a magazine while waiting...");
+    }
+      // Promise takes time (3 seconds)
+      let coffeeReady = new Promise(function(resolve) {
+        setTimeout(() => resolve("✅ Coffee is Ready! ☕"), 3000);
+      });
+
+      let result = await coffeeReady;
+      document.getElementById("demo").innerHTML = result;
+    }
+
+    
+
+    let serveTea =new Promise(function(resolve) {
+        setTimeout(() => resolve("✅ Tea is Served! 🍵"), 1000);
+      });
+      serveTea.then(function(value) {
+      console.log(value);
+    });
+
+ 
+    makeCoffee();
+    readMagazine();
+    serveTea();
+   
+  </script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+Hello Students! 👋
+This is data fetched using Fetch API!
