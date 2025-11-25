@@ -22,7 +22,7 @@ Callbacks are super useful when something takes time (like waiting for a file, d
 
 🔹 Example 1: Function Sequence Without Callbacks -->
 
- <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
 <html>
 <body>
 <h2>Callbacks Example 1</h2>
@@ -30,19 +30,19 @@ Callbacks are super useful when something takes time (like waiting for a file, d
 
 <script>
 
-// function sayGoodbye() {
-//   document.getElementById("demo").innerHTML += "Goodbye<br>";
-//console.log("Goodbye"); 
+function sayGoodbye() {
+  document.getlementById("demo").innerHTML += "Goodbye<br>";
+console.log("Goodbye"); 
   
-// }
-// function sayHello() {
-//   document.getElementById("demo").innerHTML += "Hello<br>";
- //console.log("Hello"); 
-// }
+}
+function sayHello() {
+  document.getElementById("demo").innerHTML += "Hello<br>";
+ console.log("Hello"); 
+}
 
 
-// sayHello();
-// sayGoodbye();  // runs after hello
+//sayHello();
+//sayGoodbye();  // runs after hello
 
 //sayGoodbye();
 //sayHello();    // runs after goodbye
@@ -60,74 +60,18 @@ sayHello(sayGoodbye);  // Goodbye runs only after Hello completes
 
 </script>
 </body>
-</html> 
-
-
-
-<!-- ✅ Here functions run in order we call them, not how we wrote them. -->
-
-<!-- 🔹 Example 2: Problem Without Callback -->
-  <!-- <!DOCTYPE html>
-<html>
-<body>
-<h2>Callbacks Example 2</h2>
-<p id="demo"></p>
-
-<script>
-function displayResult(some) {
-  document.getElementById("demo").innerHTML = some;
-}
-
-function calculator(num1, num2) {
-  let sum = num1 + num2;
-  return sum;  // only returns, doesn’t display
-}
-
-// Now we must call 2 functions manually
-let result = calculator(5, 5);
-displayResult(result);
-</script>
-</body>
 </html>  -->
-<!-- // Output:
-// 10 -->
-<!-- ✅ Here we had to call 2 functions manually. -->
-<!-- 
-🔹 Example 3: Callback Solution ✅ -->
 
- <!-- <!DOCTYPE html>
-<html>
-<body>
-<h2>Callbacks Example 3</h2>
-<p id="demo"></p>
 
-<script>
-function displayResult(some) {
-  document.getElementById("demo").innerHTML = some;
-}
 
-function calculator(num1, num2, callback) {
-  let sum = num1 + num2;
-  callback(sum);   // "calls back" display function
-}
 
-calculator(5, 5, displayResult);
-</script>
-</body>
-</html>   -->
-
-<!-- 👉 Output: 10
-
-✅ Here, instead of returning, the calculator just calls the callback function we pass (displayResult).
-
-This way, we control what happens with the result (print, alert, log, etc.). -->
 
 <!-- 🔹 Example 4: Filtering With Callback (Real-Life)
 
 Imagine you have a box of fruits 🍌🍎🍊 and want only oranges.
 You give the box (array) to your friend with instructions (callback) — “pick only oranges”. -->
 
- <!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <body>
 <h2>Callbacks Example 4</h2>
@@ -156,7 +100,7 @@ const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
 document.getElementById("demo").innerHTML = posNumbers;
 </script>
 </body>
-</html>  -->
+</html> 
 <!-- 👉 Output: 4,1,5,9 
  ✅ Explanation:
 
