@@ -1,0 +1,41 @@
+1️⃣ What is Context API?
+📘 Reference
+
+Context API is a way to share data globally across components without passing props manually at every level.
+
+In simple words:
+
+Context API = global data store for React components
+
+3️⃣ Context API vs Props
+
+| Feature                 | Props          | Context      |
+| ----------------------- | -------------- | ------------ |
+| Data flow               | Parent → Child | Global       |
+| Intermediate components | Required       | Not required |
+| Use case                | Small apps     | Medium apps  |
+| Complexity              | Simple         | Moderate     |
+
+4️⃣ Context API vs Redux (High-Level)
+
+| Feature        | Context API       | Redux      |
+| -------------- | ----------------- | ---------- |
+| Built-in       | ✅ Yes             | ❌ No       |
+| Setup          | Simple            | Complex    |
+| Async handling | Manual            | Excellent  |
+| Debug tools    | Limited           | Powerful   |
+| Best for       | Small–medium apps | Large apps |
+
+5️⃣ When NOT to Use Context API
+
+❌ For frequently changing data (like animations)
+❌ For very large-scale apps
+❌ When only 1–2 components need the data
+
+6️⃣ Real-World Use Cases of Context API
+
+✔ Authentication (user login)
+✔ Theme (dark / light mode)
+✔ Language selection
+✔ Cart data
+✔ User profile
