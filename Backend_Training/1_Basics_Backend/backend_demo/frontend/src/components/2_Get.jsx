@@ -6,7 +6,7 @@ function GetExample() {
   useEffect(() => {
     console.log("🌐 Frontend: Sending GET request...");
 
-    fetch("http://localhost:5000/api/users")
+    fetch("http://localhost:5000/api/user")
       .then((res) => {
         console.log("📥 Frontend: Response received");
         return res.json();

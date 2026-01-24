@@ -20,7 +20,8 @@ const car = {
 
 console.log(car.name);   // Fiat
 car.start();             // Car started
-car.drive();             // Car is driving
+car.drive();
+car ["drive"]();             // Car is driving
 // 🛠️ Real-life analogy:
 
 // Properties = car’s details (color, weight).
@@ -58,6 +59,7 @@ const person = {
 };
 
 console.log(person.fullName()); // John Doe
+console.log(person.firstName); // John
 
 // 🛠️ Real-life analogy:
 // If properties are "nouns" (name, age), then methods are "verbs" (walk, talk, eat).
@@ -75,6 +77,12 @@ function Person(first, last, age, eye) {
 
 const father = new Person("John", "Doe", 50, "blue");
 const mother = new Person("Sally", "Rally", 48, "green");
+console.log(father.firstName,father.age); // John
+console.log(mother.age); // 48
+console.log(mother.firstName); // Sally
+console.log(mother.lastName); // Rally
+console.log(mother.eyeColor); // green
+console.log(father.age); // 50
 
 // 🛠️ Real-life analogy:
 // Think of a blueprint for a house.

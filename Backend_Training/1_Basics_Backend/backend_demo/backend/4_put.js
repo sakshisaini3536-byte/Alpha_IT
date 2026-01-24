@@ -2,39 +2,37 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-
 app.use(cors());
 app.use(express.json());
 
-// 🧠 Existing data (acting like database)
+// Existing user
 let user = {
   id: 1,
   name: "Manish",
   age: 25,
+  role: "Developer",
 };
 
-// GET → Fetch existing user
+// GET user
 app.get("/api/user", (req, res) => {
-  console.log("📩 GET /api/user called");
+  console.log("📩 GET /api/user");
   res.json(user);
 });
 
-// PUT → Update existing user
+// PUT → Replace ENTIRE user
 app.put("/api/user", (req, res) => {
-  console.log("📩 PUT /api/user called");
-  console.log("📦 Data received:", req.body);
+  console.log("📩 PUT /api/user");
+  console.log("📦 Full data received:", req.body);
 
-  const { age } = req.body;
-
-  // update existing data
-  user.age = age;
+  // ❌ ENTIRE OBJECT REPLACED
+  user = req.body;
 
   res.json({
-    message: "User updated successfully",
-    updatedUser: user,
+    message: "User replaced using PUT",
+    user,
   });
 });
 
 app.listen(5000, () => {
-  console.log("🚀 Backend running on http://localhost:5000");
+  console.log("🚀 PUT Server running on http://localhost:5000");
 });

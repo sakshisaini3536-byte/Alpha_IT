@@ -2,60 +2,45 @@ import { useEffect, useState } from "react";
 
 function PutExample() {
   const [user, setUser] = useState(null);
-  const [newAge, setNewAge] = useState("");
 
-  // 1️⃣ Fetch existing data
   useEffect(() => {
-    console.log("🌐 Fetching existing user data...");
-
     fetch("http://localhost:5000/api/user")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("✅ Existing user data received:", data);
+      .then(res => res.json())
+      .then(data => {
+        console.log("✅ User fetched:", data);
         setUser(data);
-        setNewAge(data.age);
       });
   }, []);
 
-  // 2️⃣ Update data using PUT
-  function updateUser() {
-    console.log("🌐 Sending PUT request with updated age:", newAge);
+  function updateWithPut() {
+    console.log("🚨 Sending PUT request");
 
     fetch("http://localhost:5000/api/user", {
       method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        age: Number(newAge),
+        name: "Manish Updated" // ❌ ONLY NAME SENT
       }),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("✅ Updated data received:", data);
-        setUser(data.updatedUser);
-        alert(data.message);
+      .then(res => res.json())
+      .then(data => {
+        console.log("⚠️ PUT response:", data);
+        setUser(data.user);
       });
   }
 
-  if (!user) return <p>Loading user...</p>;
+  if (!user) return <p>Loading...</p>;
 
   return (
-    <div style={{ textAlign: "center", marginTop: "40px" }}>
-      <h2>PUT Example (Update Existing Data)</h2>
+    <div>
+      <h2>PUT Example</h2>
+      <p>Name: {user.name}</p>
+      <p>Age: {user.age}</p>
+      <p>Role: {user.role}</p>
 
-      <p><b>Name:</b> {user.name}</p>
-      <p><b>Age:</b> {user.age}</p>
-
-      <input
-        type="number"
-        value={newAge}
-        onChange={(e) => setNewAge(e.target.value)}
-      />
-
-      <br /><br />
-
-      <button onClick={updateUser}>Update Age</button>
+      <button onClick={updateWithPut}>
+        Update Name using PUT
+      </button>
     </div>
   );
 }

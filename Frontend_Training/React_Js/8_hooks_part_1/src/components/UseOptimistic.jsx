@@ -18,7 +18,7 @@ function UseOptimistic() {
     console.log("👍 UI updated immediately!");
 
     // 2️⃣ Simulate server request
-    await new Promise((r) => setTimeout(r, 5000));
+    await new Promise((r) => setTimeout(r, 2000));
 
     // 3️⃣ Server confirms → update REAL state
     setLikes((prev) => prev + 1);

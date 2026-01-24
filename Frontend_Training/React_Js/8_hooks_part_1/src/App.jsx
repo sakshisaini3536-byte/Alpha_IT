@@ -11,8 +11,8 @@ import './App.css'
 // import UseEffectEvent from './components/UseEffectEvent'
 // import UseActionState from './components/UseActionState'
 // import UseDeferredValue from './components/UseDefferedValue'
-import UseId from './components/UseId'
-// import UseOptimistic from './components/UseOptimistic'
+// import UseId from './components/UseId'
+import UseOptimistic from './components/UseOptimistic'
 
 function App() {
   
@@ -28,7 +28,7 @@ function App() {
     {/* <UseDeferredValue></UseDeferredValue> */}
     {/* <UseId></UseId> */}
 
-    {/* <UseOptimistic></UseOptimistic> */}
+    <UseOptimistic></UseOptimistic>
     
   
     </>
