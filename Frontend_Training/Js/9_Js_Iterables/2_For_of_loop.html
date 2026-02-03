@@ -9,11 +9,16 @@ Strings are also iterable — meaning we can go through each letter! -->
   <p id="demo3"></p>
 
   <script>
-    let word = "olleh";
+    let word = "hello";
     let output = "";
 
-    for (let letter of word) {
-      output += letter + " ";
+    for (let x of word) {
+      output += x;
+    }
+
+    const fruits=['APPLE','BANANA','GRAPES'];
+    for(let x of fruits){
+      console.log(x);
     }
 
     document.getElementById("demo3").innerHTML = output;

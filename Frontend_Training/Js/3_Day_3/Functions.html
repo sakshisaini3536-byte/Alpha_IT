@@ -46,7 +46,7 @@ function name(p1, p2, p3) {
   // code to run
   return result;  
 }
-
+console.log(name(a,b,c))
 // 📌 Explanation
 
 // function keyword → tells JavaScript you are creating a function.
@@ -63,6 +63,7 @@ function name(p1, p2, p3) {
 
 function makeJuice(fruit1, fruit2) {
   return "Juice made with " + fruit1 + " and " + fruit2;
+  //`Juice made with ${fruit1} and ${fruit2}`;
   
 }
 
@@ -139,11 +140,13 @@ function sayHi() {
 // They use the => symbol (called a “fat arrow”).
 
 // Normal Function
+add(5, 10);
 function add(a, b) {
   return a + b;
 }
-
+ // 15
 // Arrow Function
+add(5, 10);
 const add = (a, b) => {
   return a + b;
 };

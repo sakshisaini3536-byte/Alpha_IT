@@ -18,15 +18,15 @@ for...of → You take out the items (values) -->
   <p id="demo1"></p>
 
   <script>
-    const person = {
-      name: "Manish",
-      age: 25,
+    const info = {
+      name: "PRATEEK",
+      age: 22,
       city: "Chandigarh"
     };
 
     let text = "";
-    for (let key in person) {
-      text =  " 👉 " + person[key] + "<br>";
+    for (let key in info) {
+      text += key + ": " +  [key] + "<br>";
     }
 
     document.getElementById("demo1").innerHTML = text;
