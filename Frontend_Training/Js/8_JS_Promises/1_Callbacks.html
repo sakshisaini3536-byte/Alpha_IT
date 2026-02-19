@@ -22,7 +22,7 @@ Callbacks are super useful when something takes time (like waiting for a file, d
 
 🔹 Example 1: Function Sequence Without Callbacks -->
 
- <!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <body>
 <h2>Callbacks Example 1</h2>
@@ -30,22 +30,22 @@ Callbacks are super useful when something takes time (like waiting for a file, d
 
 <script>
 
-function sayGoodbye() {
-  document.getlementById("demo").innerHTML += "Goodbye<br>";
-console.log("Goodbye"); 
+// function sayGoodbye() {
+//   document.getElementById("demo").innerHTML += "Goodbye<br>";
+// console.log("Goodbye"); 
   
-}
-function sayHello() {
-  document.getElementById("demo").innerHTML += "Hello<br>";
- console.log("Hello"); 
-}
+// }
+// function sayHello() {
+//   document.getElementById("demo").innerHTML += "Hello<br>";
+//  console.log("Hello"); 
+// }
 
 
-//sayHello();
-//sayGoodbye();  // runs after hello
+// sayHello();
+// sayGoodbye();  // runs after hello
 
-//sayGoodbye();
-//sayHello();    // runs after goodbye
+// sayGoodbye();
+// sayHello();    // runs after goodbye
 
 function sayHello(callback) {
   console.log("Hello");
@@ -60,7 +60,7 @@ sayHello(sayGoodbye);  // Goodbye runs only after Hello completes
 
 </script>
 </body>
-</html>  -->
+</html> 
 
 
 
@@ -70,7 +70,7 @@ sayHello(sayGoodbye);  // Goodbye runs only after Hello completes
 
 Imagine you have a box of fruits 🍌🍎🍊 and want only oranges.
 You give the box (array) to your friend with instructions (callback) — “pick only oranges”. -->
-
+<!-- 
  <!DOCTYPE html>
 <html>
 <body>
@@ -100,7 +100,7 @@ const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
 document.getElementById("demo").innerHTML = posNumbers;
 </script>
 </body>
-</html> 
+</html>  -->
 <!-- 👉 Output: 4,1,5,9 
  ✅ Explanation:
 

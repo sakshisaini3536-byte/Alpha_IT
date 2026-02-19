@@ -12,7 +12,7 @@ Real-Life Example: Is there any minor (below 18)? -->
 
 <script>
 const ages = [19, 18, 22];
-let hasMinor = ages.some(a => a < 18);
+let hasMinor = ages.some(a => a <= 18);
 
 document.getElementById("demo").innerHTML = "Any minor? " + hasMinor;
 </script>
