@@ -12,18 +12,21 @@ function AddUser() {
   async function handleSubmit() {
     console.log("📤 Sending user to backend");
 
-    await axios.post("https://jsonplaceholder.typicode.com/users", {
+    if (!name || !email) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    await axios.post("http://localhost:5000/api/users", {
       name,
       email,
     });
-// await axios.post("https://jsonplaceholder.typicode.com/users", {
-//       name,
-//       email,
-//     });
 
     console.log("✅ User saved, refreshing Redux state");
 
-    // 🔥 IMPORTANT LINE
+    setName("");
+    setEmail("");
+
     dispatch(fetchUsers());
   }
 
@@ -33,15 +36,19 @@ function AddUser() {
 
       <input
         placeholder="Name"
+        value={name}
         onChange={(e) => setName(e.target.value)}
       />
 
       <input
         placeholder="Email"
+        value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
 
-      <button onClick={handleSubmit}>Add User</button>
+      <button className="primary" onClick={handleSubmit}>
+        Add User
+      </button>
     </div>
   );
 }

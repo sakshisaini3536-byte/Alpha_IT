@@ -43,9 +43,7 @@
 
 //Redux Counter App
 
-import Dashboard from "./components/11_Redux/Dashboard";
-import Navbar from "./components/11_Redux/Navbar";
-import Footer from "./components/11_Redux/Footer";
+import "./App.css";
 import Users from "./components/11_Redux/Users";
 import AddUser from "./components/11_Redux/AddUser";
 
@@ -53,19 +51,18 @@ function App() {
   console.log("🚀 App rendered");
 
   return (
-    <div>
-      <h2>Redux Toolkit Phase 1</h2>
-      {/* <Navbar></Navbar>
-      <Dashboard></Dashboard>
-      <Footer></Footer> */}
-      <Users></Users>
-      <AddUser></AddUser>
+    <div className="app-container">
+      <h1>MERN Redux User Management</h1>
 
+      <div className="card">
+        <AddUser />
+      </div>
+
+      <div className="card">
+        <Users />
+      </div>
     </div>
   );
 }
 
 export default App;
-
-
-

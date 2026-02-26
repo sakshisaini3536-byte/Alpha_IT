@@ -1,11 +1,21 @@
 const mongoose = require("mongoose");
 
+console.log("📦 User model loading...");
+
 const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  age: Number,
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
 });
 
-console.log("📦 User model ready");
+const User = mongoose.model("User", userSchema);
 
-module.exports = mongoose.model("User", userSchema);
+console.log("✅ User model ready");
+
+module.exports = User;

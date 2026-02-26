@@ -1,42 +1,139 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* ===============================
+   GLOBAL
+================================= */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 30px;
+  color: #333;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* ===============================
+   MAIN CONTAINER
+================================= */
+.app-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* ===============================
+   CARD
+================================= */
 .card {
-  padding: 2em;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  transition: 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* ===============================
+   INPUTS
+================================= */
+input {
+  padding: 10px;
+  margin: 5px 10px 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 8px;
+  transition: 0.3s ease;
+}
+
+button.primary {
+  background: #4a90e2;
+  color: white;
+}
+
+button.primary:hover {
+  background: #357abd;
+}
+
+button.edit {
+  background: #f5a623;
+  color: white;
+}
+
+button.edit:hover {
+  background: #d48806;
+}
+
+button.delete {
+  background: #ff4d4d;
+  color: white;
+}
+
+button.delete:hover {
+  background: #cc0000;
+}
+
+button.save {
+  background: #28a745;
+  color: white;
+}
+
+button.save:hover {
+  background: #1e7e34;
+}
+
+/* ===============================
+   USER ROW
+================================= */
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 600px) {
+  .user-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-actions {
+    margin-top: 10px;
+  }
 }
