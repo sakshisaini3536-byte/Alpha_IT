@@ -63,6 +63,7 @@ throw()	Throws an error inside generator
     }
 
     function error() {
+  
       try {
         const res = gen.throw("💥 Error occurred"); //injects an exception into the paused generator; if the generator doesn't catch it, the exception propagates out and the generator is closed.
         document.getElementById("output").innerText = JSON.stringify(res);

@@ -44,7 +44,7 @@ function myDisplayer(some) {
 }
 
 // Create a Promise
-let myPromise = new Promise(function(myResolve, myReject) {
+let myPromise = new Promise(function ( myResolve,myReject) {
   let x = 0;
 
   if (x === 1) {
@@ -59,8 +59,8 @@ let myPromise = new Promise(function(myResolve, myReject) {
 
 // Use the Promise
 myPromise.then(
-  function(value) { myDisplayer(value); },   // success case
-  function(error) { myDisplayer(error); } , // error case
+  function(value) { myDisplayer(value); },   // success case (1)
+  function(error) { myDisplayer(error); } , // error case (2)
   console.log(myPromise)
 );
 </script>

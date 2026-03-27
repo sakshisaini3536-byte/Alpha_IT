@@ -15,35 +15,36 @@
 // export default App;
 
 
-//props children example
-import Note from "./Note";
-import Student from "./Student";
-function App() {
-  return (
-    <div>
-      <h1>Props Children Example</h1>
+// //props children example
+// import Note from "./Note";
+// import Student from "./Student";
+// function App() {
+//   return (
+//     <div>
+//       <h1>Props Children Example</h1>
 
-      <Note content="This is the React.">
+//       <Note content="This is the React.">
        
-      </Note>
+//       </Note>
 
-      <Note>
-        <h3>Another Note Block</h3>
-        <p>More info passed as children.</p>
-        <button>Click Me</button>
+//       <Note>
+//         <h3>Another Note Block</h3>
+//         <p>More info passed as children.</p>
+//         <button>Click Me</button>
+//         <p>Additional content inside the Note component.</p>
         
-      </Note>
-      <Note>
-         <Student name="Manish" age={25} />
+//       </Note>
+//       <Note>
+//          <Student name="Manish" age={25} />
 
-      </Note>
-    </div>
-  );
-}
+//       </Note>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
-//Child → Parent (Callback Method)
+// //Child → Parent (Callback Method)
 
 // import StudentItem from "./StudentItem";
 
@@ -65,30 +66,30 @@ export default App;
 
 //Sibling → Sibling (Indirect via Parent)
 
-// import { useState } from "react";
-// import AddStudent from "./AddStudent";
-// import StudentList from "./StudentList";
+import { useState } from "react";
+import AddStudent from "./AddStudent";
+import StudentList from "./StudentList";
 
-// function App() {
-//   const [students, setStudents] = useState(["Manish", "Rahul"]);
+function App() {
+  const [students, setStudents] = useState(["Manish", "Rahul"]);
 
-//   function addNewStudent(name) {
-//     console.log("New student received from AddStudent:", name);
-//     setStudents([...students, name]);
-//   }
+  function addNewStudent(name) {
+    console.log("New student received from AddStudent:", name);
+    setStudents([...students, name]);
+  }
 
-//   return (
-//     <div>
-//       <h1>Task 4: Sibling to Sibling</h1>
+  return (
+    <div>
+      <h1>Task 4: Sibling to Sibling</h1>
 
-//       <AddStudent sendStudentToParent={addNewStudent} />
+      <AddStudent sendStudentToParent={addNewStudent} />
 
-//       <StudentList students={students} />
-//     </div>
-//   );
-// }
+      <StudentList students={students} />
+    </div>
+  );
+}
 
-// export default App;
+export default App;
 
 
 // // //Grandchild → Parent (Pass Function Downwards)

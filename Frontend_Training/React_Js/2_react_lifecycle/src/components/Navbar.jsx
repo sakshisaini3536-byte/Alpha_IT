@@ -6,6 +6,7 @@ function Navbar() {
     <div>
       <h1>Hi I am Navbar</h1>
       <About></About>
+     
     </div>
   )
 }

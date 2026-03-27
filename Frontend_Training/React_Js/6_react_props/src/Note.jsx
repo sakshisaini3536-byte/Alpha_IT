@@ -11,7 +11,7 @@ function Note(props) {
         border: "2px solid green"
       }}
     >
-      <h2>Note Box</h2>
+      <h1>Note Box</h1>
       {props.children}
       {props.content}
 
